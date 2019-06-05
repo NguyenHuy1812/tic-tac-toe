@@ -202,12 +202,15 @@ class Game extends React.Component {
         }
     }
     responseFacebook = (response) => {
-        console.log('repsososos', response);
+       if(response){
         this.setState({
             isSignIn: true,
             userName: response.name,
         })
+    }else {
+        return prompt('log in please')
     }
+}
 
     render() {
         if (this.state.isSignIn) {
@@ -235,7 +238,6 @@ class Game extends React.Component {
                     fields="name,email,picture"
                     isSignIn={this.state.isSignIn}
                     callback={(arg) => this.responseFacebook(arg)}
-
                 />
 
             </div>
