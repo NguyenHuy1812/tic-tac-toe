@@ -203,12 +203,13 @@ class Game extends React.Component {
     }
     responseFacebook = (response) => {
        if(response){
+           console.log('response',response)
         this.setState({
             isSignIn: true,
             userName: response.name,
         })
     }else {
-        return prompt('log in please')
+        return console.log('wrong rtiuheiurghwieufgwiuyegfwef')
     }
 }
 
