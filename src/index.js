@@ -202,14 +202,16 @@ class Game extends React.Component {
         }
     }
     responseFacebook = (response) => {
-       if(response){
-           console.log('response',response)
+       if(response === undefined){
+       return  console.log('response',response)
+    }else {
+        console.log('wrong rtiuheiurghwieufgwiuyegfwef')
+        return (
         this.setState({
             isSignIn: true,
             userName: response.name,
         })
-    }else {
-        return console.log('wrong rtiuheiurghwieufgwiuyegfwef')
+        )
     }
 }
 
